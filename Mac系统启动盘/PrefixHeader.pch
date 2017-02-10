@@ -1,0 +1,33 @@
+//
+//  PrefixHeader.pch
+//  Mac系统启动盘
+//
+//  Created by dasen on 2017/1/23.
+//  Copyright © 2017年 Adam. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+#import "DSAlert.h"
+#import "NSView+Frame.h"
+#define Disk_Des ((__bridge NSDictionary *)(DADiskCopyDescription(disk)))
+
+#define Disk_Des_Disk(disk) ((__bridge NSDictionary *)(DADiskCopyDescription(disk)))
+#define BSDName_Disk(disk)       (Disk_Des_Disk(disk)[@"DAMediaBSDName"])
+
+#define VolumeName    (Disk_Des[@"DAVolumeName"])
+#define BSDName       (Disk_Des[@"DAMediaBSDName"])
+
+#define DiskProtocol  (Disk_Des[@"DADeviceProtocol"])
+#define DiskMediaSize (Disk_Des[@"DAMediaSize"])
+
+#define VolumePath    (Disk_Des[@"DAVolumePath"])
+
+#define replaceChar @"👀"
+
+#define DiskSize ([DiskMediaSize doubleValue] / 1000 / 1000 / 1000)
+#define FileDoNotWant(char) [NSCharacterSet characterSetWithCharactersInString:char]
+
+#define UIColorRGB(rgbValue) [NSColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
+
+#endif /* PrefixHeader_pch */

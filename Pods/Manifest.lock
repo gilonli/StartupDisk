@@ -1,0 +1,12 @@
+PODS:
+  - ProgressKit (0.6.1)
+
+DEPENDENCIES:
+  - ProgressKit (~> 0.6.1)
+
+SPEC CHECKSUMS:
+  ProgressKit: c6c640344bb7512db1c9c7e33dee63c8f663b98f
+
+PODFILE CHECKSUM: 69b943eded57e7a7e71ed7a32dcbd088db53b912
+
+COCOAPODS: 1.1.1
