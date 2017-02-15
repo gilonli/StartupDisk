@@ -24,7 +24,6 @@ typedef NS_OPTIONS (NSInteger,DiskChangeType){
 @property (nonatomic, weak)id<DADSDiskToolDelegate> comBoxdelegate;
 
 + (void)registerDiskNotice;
-+ (void)diskRenameWithdisk:(DADiskRef)disk;
 - (BOOL)isDiskLoadedWithName:(NSString *)name;
 
 + (NSString *)getApendDiskNameWithDisk:(DADiskRef)disk;

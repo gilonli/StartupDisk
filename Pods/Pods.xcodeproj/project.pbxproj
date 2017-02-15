@@ -48,21 +48,21 @@
 		35A6B8F08733C3A3698FAEA4FBCA3466 /* ProgressKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ProgressKit-umbrella.h"; sourceTree = "<group>"; };
 		37A382DB87DA0B522C4C982358805063 /* Pods-Mac系统启动盘-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Mac系统启动盘-dummy.m"; sourceTree = "<group>"; };
 		4A57765DAA0490DF2B8307CF21DBC066 /* DeterminateAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DeterminateAnimation.swift; path = Determinate/DeterminateAnimation.swift; sourceTree = "<group>"; };
-		4C8D5CA6525D47749E0934167E65E70A /* Pods-Mac系统启动盘.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Mac系统启动盘.modulemap"; sourceTree = "<group>"; };
+		4C8D5CA6525D47749E0934167E65E70A /* Pods-Mac系统启动盘.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-Mac系统启动盘.modulemap"; sourceTree = "<group>"; };
 		4E589C165E035AD9DAC2F98449EA22D0 /* Pods-Mac系统启动盘.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Mac系统启动盘.debug.xcconfig"; sourceTree = "<group>"; };
 		52D508B1FBA5332E8F54943E20B93F5D /* Crawler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Crawler.swift; path = InDeterminate/Crawler.swift; sourceTree = "<group>"; };
 		53517184B07E3741B157678F5E52441F /* Rainbow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Rainbow.swift; path = InDeterminate/Rainbow.swift; sourceTree = "<group>"; };
 		550EED73657CD303A15A26335BA02869 /* ProgressUtils.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ProgressUtils.swift; sourceTree = "<group>"; };
 		631795EF0CAB492CA06D0D72CC69AEDA /* ProgressKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ProgressKit-prefix.pch"; sourceTree = "<group>"; };
 		676E1B0D316520E34109C435B14F6087 /* ProgressKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ProgressKit-dummy.m"; sourceTree = "<group>"; };
-		69B78662B72482ABF3EAC1247E8B6749 /* ProgressKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = ProgressKit.modulemap; sourceTree = "<group>"; };
-		715136E450A811800DF20ED0E1BC9C2F /* Pods_Mac_____.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods_Mac_____.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		69B78662B72482ABF3EAC1247E8B6749 /* ProgressKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = ProgressKit.modulemap; sourceTree = "<group>"; };
+		715136E450A811800DF20ED0E1BC9C2F /* Pods_Mac_____.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Mac_____.framework; path = "Pods-Mac系统启动盘.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		850F045145C41B49D16E0271EC11A104 /* ShootingStars.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ShootingStars.swift; path = InDeterminate/ShootingStars.swift; sourceTree = "<group>"; };
 		89D50B8B1FCA4681758DF2B3D3B071C9 /* ProgressBar.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ProgressBar.swift; path = Determinate/ProgressBar.swift; sourceTree = "<group>"; };
 		8CD1FAFADF723754BB1A6C1FC5BBD2BB /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A2A5AFF0A3CC2514C7565878CA7527D4 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A7B123DA455961392550FD1FAD4B7D6A /* ProgressKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ProgressKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A7B123DA455961392550FD1FAD4B7D6A /* ProgressKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = ProgressKit.framework; path = ProgressKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B404BA0D3777A9AF3B05B3E15C51253B /* Pods-Mac系统启动盘-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Mac系统启动盘-acknowledgements.plist"; sourceTree = "<group>"; };
 		C8FBC107ADF5B1F35D046D79D2B7DC65 /* MaterialProgress.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MaterialProgress.swift; path = InDeterminate/MaterialProgress.swift; sourceTree = "<group>"; };
 		CDDC61A24D80F1B625DE8302D04B3231 /* RotatingArc.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RotatingArc.swift; path = InDeterminate/RotatingArc.swift; sourceTree = "<group>"; };
@@ -174,6 +174,7 @@
 				03EDB0BAFD685DDE3299AE69B6BE0973 /* Spinner.swift */,
 				3BD14F4D02CD4313680CD9C9513A23C6 /* Support Files */,
 			);
+			name = ProgressKit;
 			path = ProgressKit;
 			sourceTree = "<group>";
 		};
@@ -350,7 +351,7 @@
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "Pods_Mac_____";
+				PRODUCT_NAME = Pods_Mac_____;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -358,6 +359,40 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
+		};
+		33A001DD9B70327B3B7E95014041E83E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 09A506E28B8393D71844B6294B5AA3AC /* ProgressKit.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_VERSION = A;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/ProgressKit/ProgressKit-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ProgressKit/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MODULEMAP_FILE = "Target Support Files/ProgressKit/ProgressKit.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = ProgressKit;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
 		};
 		34342BBF37D3A9ED85FF2EB654934920 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -432,7 +467,7 @@
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "Pods_Mac_____";
+				PRODUCT_NAME = Pods_Mac_____;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -440,7 +475,7 @@
 			};
 			name = Release;
 		};
-		C1CF4CBA907403AE61BFEDCD94DDB7CA /* Debug */ = {
+		E336CF0C9D855640D5F530549227CA47 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 09A506E28B8393D71844B6294B5AA3AC /* ProgressKit.xcconfig */;
 			buildSettings = {
@@ -474,40 +509,6 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
-		};
-		C3A9CB15AC7BCFDE18A3F5C6664725B5 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 09A506E28B8393D71844B6294B5AA3AC /* ProgressKit.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "-";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				FRAMEWORK_VERSION = A;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/ProgressKit/ProgressKit-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/ProgressKit/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				MODULEMAP_FILE = "Target Support Files/ProgressKit/ProgressKit.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = ProgressKit;
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
 		};
 		F6FC88CB717F413199C282718D2DC09F /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -573,8 +574,8 @@
 		BC66999468A3E99FB44120B235A71D8E /* Build configuration list for PBXNativeTarget "ProgressKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C1CF4CBA907403AE61BFEDCD94DDB7CA /* Debug */,
-				C3A9CB15AC7BCFDE18A3F5C6664725B5 /* Release */,
+				E336CF0C9D855640D5F530549227CA47 /* Debug */,
+				33A001DD9B70327B3B7E95014041E83E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

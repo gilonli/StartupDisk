@@ -25,6 +25,8 @@
     }
     return self;
 }
+
+/// 组合命令，和进行调用命令方法
 - (void)makeStartupDiskWithSystemPath:(NSString *)systemPath disk:(NSString *)diskInfo
 {
     // 检查路径

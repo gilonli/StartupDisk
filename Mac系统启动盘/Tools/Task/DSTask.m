@@ -41,6 +41,7 @@
     self.bsdName       = BSDName;
     [self runShell];
 }
+
 - (void)diskDisappeared:(NSNotification *)objc {
     DADiskRef disk = (__bridge DADiskRef)(objc.object);
     NSString *bsdName = BSDName;
@@ -54,6 +55,7 @@
         NSLog(@"硬盘没有被退出");
     }
 }
+
 - (void)startClock{
     NSString *filePath = self.codeArray[4];
     NSString *volumeFilePath = @"/Volumes/Install macOS Sierra" ;
@@ -101,10 +103,12 @@
         [self.task waitUntilExit];
     });
 }
+
 -(void)dealloc
 {
     [[NSNotificationCenter defaultCenter]removeObserver:self];
 }
+
 #pragma mark - 懒加载
 - (NSMutableArray *)codeArray
 {

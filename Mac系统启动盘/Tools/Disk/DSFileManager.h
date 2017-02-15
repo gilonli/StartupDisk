@@ -9,7 +9,9 @@
 #import <Foundation/Foundation.h>
 
 @interface DSFileManager : NSObject
-
+//// 获取文件大小
 + (float)folderSizeAtPath:(NSString*) folderPath;
+
+/// 重命名
 + (void)renameFileWithPath:(NSString *)path;
 @end

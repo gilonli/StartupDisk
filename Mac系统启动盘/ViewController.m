@@ -26,20 +26,19 @@ typedef NS_ENUM(NSInteger, DiskState) {
 
 @interface ViewController () <FileDragViewDelegate,DSTaskdelegate>
 
-@property (weak) IBOutlet DiskComboBox *dsCombox;
 @property (weak) IBOutlet NSImageView  *font;
 @property (weak) IBOutlet NSTextField  *pathLabel;
+
+@property (weak) IBOutlet DiskComboBox *dsCombox;
 @property (weak) IBOutlet FileDragView *fileDragView;
 
-@property (nonatomic, strong)DADSDiskTool   *diskTool;
-@property (nonatomic, strong)DSMakeSystemDisk *dsTask;
-
-@property (nonatomic, copy)NSString *systemFilePath;
+@property (nonatomic, copy)NSString      *systemFilePath;
+@property (nonatomic, strong)Spinner     *loadingView;
 @property (nonatomic, strong)ProgressBar *processBar;
+@property (nonatomic, strong)WKWebView   *loadingWebView;
 
-@property (nonatomic, strong)Spinner *loadingView;
-
-@property (nonatomic, strong)WKWebView *loadingWebView;
+@property (nonatomic, strong)DADSDiskTool *diskTool;
+@property (nonatomic, strong)DSMakeSystemDisk *dsTask;
 
 @end
 
@@ -88,7 +87,7 @@ typedef NS_ENUM(NSInteger, DiskState) {
     [self setSytemFileState:DiskStateSystemNotFound];
 }
 
-/// 制作进度
+/// 制作进度回调
 - (void)makeSystemDiskProcess:(CGFloat)process
 {
     [self setSytemFileState:DiskStateMaking];
@@ -107,17 +106,21 @@ typedef NS_ENUM(NSInteger, DiskState) {
         [self.view addSubview:self.loadingWebView];
     }
 }
+
+/// 重置进度
 - (void)reloadProcess{
     [self.loadingView    removeFromSuperview];
     [self.loadingWebView removeFromSuperview];
     self.processBar.progress = 0;
 }
 
+/// 初始化UI
 - (void)makeSystemDiskStateNormal
 {
     [self reloadProcess];
     [self setSytemFileState:DiskStateNormal];
 }
+
 /// 设置文件状态
 - (void)setSytemFileState:(DiskState )state{
     
@@ -183,6 +186,7 @@ typedef NS_ENUM(NSInteger, DiskState) {
     }
     return _processBar;
 }
+
 - (Spinner *)loadingView
 {
     if (!_loadingView) {
@@ -196,6 +200,7 @@ typedef NS_ENUM(NSInteger, DiskState) {
     }
     return _loadingView;
 }
+
 - (WKWebView *)loadingWebView
 {
     if (!_loadingWebView) {

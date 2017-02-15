@@ -51,11 +51,13 @@ static DADSDiskTool *selfObjc = nil;
     //运行循环的调度会话。
     DASessionScheduleWithRunLoop(session,CFRunLoopGetCurrent(), kCFRunLoopDefaultMode);
     
+    //注册磁盘信息变化回调
     DARegisterDiskDescriptionChangedCallback(session, NULL, NULL, DiskDescription, NULL);
-
+    
     //注销一个核心基础对象。
     CFRelease(session);
 }
+
 void DiskDescription( DADiskRef disk,CFArrayRef keys,void *context){
     [selfObjc.comBoxdelegate diskDidChangeState:selfObjc.diskDict];
 }
@@ -79,16 +81,17 @@ DADissenterRef goodbye_diskmount(DADiskRef disk, void *context){
     return NULL;
 }
 
+/// 磁盘进行加载或者卸载
 - (void)diskChange:(DiskChangeType)state disk:(DADiskRef)disk{
     if (![VolumeName length] || ![BSDName length] || ![self checkDiskType:disk]) {
         return;
     }
     
     switch (state) {
-        case DiskChangeTypeAppear:
+            case DiskChangeTypeAppear:
             [self.diskDict setValue:(__bridge id _Nullable)(disk) forKey:BSDName];
             break;
-        case DiskChangeTypeDismiss:
+            case DiskChangeTypeDismiss:
             [self.diskDict removeObjectForKey:BSDName];
         default:
             break;
@@ -96,12 +99,14 @@ DADissenterRef goodbye_diskmount(DADiskRef disk, void *context){
     [self.comBoxdelegate diskDidChangeState:self.diskDict];
 }
 
+/// 拼接磁盘描述名称
 + (NSString *)getApendDiskNameWithDisk:(DADiskRef)disk{
     
     NSString *mediaSize = [NSString stringWithFormat:@"%.2fG",DiskSize];
     return [NSString stringWithFormat:@"%@ - - %@ (%@)",BSDName,VolumeName,mediaSize];
 }
 
+/// 检查是不是移动盘符
 - (BOOL)checkDiskType:(DADiskRef)disk{
     if (![DiskProtocol isEqualToString:@"USB"] || !VolumeName || DiskSize < 8.0) {
         return NO;
@@ -109,11 +114,13 @@ DADissenterRef goodbye_diskmount(DADiskRef disk, void *context){
     return YES;
 }
 
+/// 根据磁盘描述信息，获取磁盘对象
 - (DADiskRef)getDiskWithDiskInfo:(NSString *)name{
     NSString *bsdName = [name componentsSeparatedByString:@" "].firstObject;
     return (__bridge DADiskRef)([self.diskDict valueForKey:bsdName]);
 }
 
+/// 磁盘是否装载
 - (BOOL)isDiskLoadedWithName:(NSString *)name
 {
     NSString *bsdName = [name componentsSeparatedByString:@" "].firstObject;
@@ -122,12 +129,6 @@ DADissenterRef goodbye_diskmount(DADiskRef disk, void *context){
         return NO;
     }
     return YES;
-}
-
-+ (void)diskRenameWithdisk:(DADiskRef)disk;
-{
-    CFStringRef strRef = (__bridge CFStringRef)BSDName;
-    DADiskRename(disk, strRef, kDADiskRenameOptionDefault, NULL, NULL);
 }
 
 - (NSMutableDictionary *)diskDict
