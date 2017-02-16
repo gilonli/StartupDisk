@@ -96,10 +96,11 @@
     [self.task setLaunchPath:parameter.firstObject];
     [self.task setArguments:parameter];
     self.codeArray = parameter;
-    [self startClock];
-    
     dispatch_async(dispatch_get_global_queue(0, 0), ^{
         [self.task launch];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self startClock];
+        });
         [self.task waitUntilExit];
     });
 }

@@ -91,7 +91,7 @@ typedef NS_ENUM(NSInteger, DiskState) {
 /// 制作进度回调
 - (void)makeSystemDiskProcess:(CGFloat)process
 {
-    [self setSytemFileState:DiskStateMaking];
+    [self setSytemFileState:DiskStateFormat];
     
     if (!self.loadingView.superview) {
         [self.view addSubview:self.loadingView];
@@ -102,6 +102,8 @@ typedef NS_ENUM(NSInteger, DiskState) {
     if (_processBar.progress <= 0.01) {
         return ;
     }
+    
+    [self setSytemFileState:DiskStateMaking];
     [self.loadingView removeFromSuperview];
     if (!self.loadingWebView.superview) {
         [self.view addSubview:self.loadingWebView];
