@@ -20,6 +20,7 @@
 typedef NS_ENUM(NSInteger, DiskState) {
     DiskStateSystemNotFound,
     DiskStateNormal,
+    DiskStateFormat,
     DiskStateMaking,
     DiskStateMakeSuccess
 };
@@ -129,20 +130,23 @@ typedef NS_ENUM(NSInteger, DiskState) {
     NSTextAlignment alignment = NSTextAlignmentCenter;
     
     switch (state) {
-        case DiskStateSystemNotFound:
+            case DiskStateSystemNotFound:
             imageName = @"提示";
             title     = @"安装包路径未获取";
             alignment = NSTextAlignmentRight;
             self.systemFilePath = @"";
             break;
-        case DiskStateNormal:
+            case DiskStateNormal:
             imageName = @"路径已获取";
             alignment = NSTextAlignmentCenter;
             break;
-        case DiskStateMaking:
+            case DiskStateFormat:
+            imageName = @"格式化中";
+            break;
+            case DiskStateMaking:
             imageName = @"制作中请稍等";
             break;
-        case DiskStateMakeSuccess:
+            case DiskStateMakeSuccess:
             imageName = @"启动盘制作完成";
             [self reloadProcess];
             break;

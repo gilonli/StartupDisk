@@ -11,5 +11,4 @@
 @interface DSAlert : NSObject
 + (void)alertWithString:(NSString *)string name:(NSString *)name;
 + (void)alertWithTitle:(NSString *)firstname SecondTitle:(NSString *)secondname complate:(void(^)(BOOL state))complate;
-
 @end
