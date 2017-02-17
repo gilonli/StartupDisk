@@ -57,11 +57,15 @@ typedef NS_ENUM(NSInteger, DiskState) {
     self.dsCombox.editable       = NO;
     self.fileDragView.delegate   = self;
     self.view.mm_BackgroundColor = [NSColor whiteColor];
-    
 }
 
 - (IBAction)makeSystem:(NSButton *)sender {
     [self.dsTask makeStartupDiskWithSystemPath:self.systemFilePath disk:self.dsCombox.stringValue];
+}
+- (IBAction)openPDF:(NSButton *)sender {
+    NSString *path = [[NSBundle mainBundle]pathForResource:@"使用说明.pdf" ofType:nil];
+    NSString *code = [NSString stringWithFormat:@"open %@",path];
+    system([code UTF8String]);
 }
 
 #pragma mark - 代理方法

@@ -48,26 +48,29 @@ static DADSDiskTool *selfObjc = nil;
     //注册一个回调函数称为每当一个磁盘已经消失了。
     DARegisterDiskDisappearedCallback(session, NULL, goodbye_disk, NULL);
     
-    //运行循环的调度会话。
-    DASessionScheduleWithRunLoop(session,CFRunLoopGetCurrent(), kCFRunLoopDefaultMode);
-    
     //注册磁盘信息变化回调
     DARegisterDiskDescriptionChangedCallback(session, NULL, NULL, DiskDescription, NULL);
+    
+    //运行循环的调度会话。
+    DASessionScheduleWithRunLoop(session,CFRunLoopGetCurrent(), kCFRunLoopDefaultMode);
     
     //注销一个核心基础对象。
     CFRelease(session);
 }
 
 void DiskDescription( DADiskRef disk,CFArrayRef keys,void *context){
+    // 磁盘休息修改后，通过代理，告诉comBox要刷新视图
     [selfObjc.comBoxdelegate diskDidChangeState:selfObjc.diskDict];
 }
 
 void hello_disk(DADiskRef disk, void *context){
+    
     [selfObjc diskChange:DiskChangeTypeAppear disk:disk];
 }
 
 void goodbye_disk(DADiskRef disk, void *context){
     [selfObjc diskChange:DiskChangeTypeDismiss disk:disk];
+    /// 磁盘拔出或异常中断后，发出通知，用于处理中断的通知。
     [[NSNotificationCenter defaultCenter]postNotificationName:DiskDisappeared object:(__bridge id _Nullable)(disk)];
 }
 
@@ -81,12 +84,14 @@ DADissenterRef goodbye_diskmount(DADiskRef disk, void *context){
     return NULL;
 }
 
-/// 磁盘进行加载或者卸载
+/// 统一处理磁盘的装载与卸载
 - (void)diskChange:(DiskChangeType)state disk:(DADiskRef)disk{
+    NSLog(@"%@",Disk_Des);
+    // 过滤掉系统盘符，和小于8G的盘符
     if (![VolumeName length] || ![BSDName length] || ![self checkDiskType:disk]) {
         return;
     }
-    
+    // 用于记录磁盘，为了给combox传递数据
     switch (state) {
             case DiskChangeTypeAppear:
             [self.diskDict setValue:(__bridge id _Nullable)(disk) forKey:BSDName];
@@ -96,6 +101,7 @@ DADissenterRef goodbye_diskmount(DADiskRef disk, void *context){
         default:
             break;
     }
+    
     [self.comBoxdelegate diskDidChangeState:self.diskDict];
 }
 

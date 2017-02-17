@@ -26,6 +26,7 @@
 		99A003EE1E35F92B0078DAF7 /* DSAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = 99A003E91E35F92B0078DAF7 /* DSAlert.m */; };
 		99A003F31E3603B50078DAF7 /* DADSDiskTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 99A003F21E3603B50078DAF7 /* DADSDiskTool.m */; };
 		99C93FEC1E372B74002B84B5 /* DSFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 99C93FEB1E372B74002B84B5 /* DSFileManager.m */; };
+		99CC5EE71E56CD6E00114696 /* 使用说明.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 99CC5EE61E56CD6E00114696 /* 使用说明.pdf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -65,6 +66,7 @@
 		99A003F21E3603B50078DAF7 /* DADSDiskTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DADSDiskTool.m; sourceTree = "<group>"; };
 		99C93FEA1E372B74002B84B5 /* DSFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSFileManager.h; sourceTree = "<group>"; };
 		99C93FEB1E372B74002B84B5 /* DSFileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSFileManager.m; sourceTree = "<group>"; };
+		99CC5EE61E56CD6E00114696 /* 使用说明.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "使用说明.pdf"; sourceTree = "<group>"; };
 		CD408E9236DAFEFB931DFD7F /* Pods_Mac_____.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods_Mac_____.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3375D037DB415FD3A67D82F /* Pods-Mac系统启动盘.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mac系统启动盘.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Mac系统启动盘/Pods-Mac系统启动盘.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -169,6 +171,7 @@
 		996ED56C1E29B324007497BF /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				99CC5EE61E56CD6E00114696 /* 使用说明.pdf */,
 				99909B311E38B25100FAD145 /* itsnottoolate3.gif */,
 				996ED5691E29B324007497BF /* AppDelegate.h */,
 				996ED56A1E29B324007497BF /* AppDelegate.m */,
@@ -277,6 +280,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				996ED5731E29B324007497BF /* Assets.xcassets in Resources */,
+				99CC5EE71E56CD6E00114696 /* 使用说明.pdf in Resources */,
 				996ED5811E29CAEF007497BF /* Main.storyboard in Resources */,
 				99909B321E38B25100FAD145 /* itsnottoolate3.gif in Resources */,
 			);
